@@ -1,0 +1,271 @@
+<!DOCTYPE html><html><head><title>HIT</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><script type='text/javascript' src='https://s3.amazonaws.com/mturk-public/externalHIT_v1.js'></script></head><body><form name="mturk_form" method="post" id="mturk_form" action="https://www.mturk.com/mturk/externalSubmit"><input type="hidden" value="" name="assignmentId" id="assignmentId" /><!-- HIT template: WebsiteDataCollection-v3.0 --><!-- The following snippet enables the 'responsive' behavior on smaller screens -->
+<!-- HIT template: Sentiment-v3.0 --><!-- The following snippet enables the 'responsive' behavior on smaller screens -->
+<meta content="width=device-width,initial-scale=1" name="viewport" />
+<section class="container" id="VQR Annotation"><!-- Instructions (collapsible) -->
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="panel panel-primary"><!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature --><a class="panel-heading" href="javascript:void(0);" id="collapseTrigger"><strong>Annotation Instructions</strong> <span class="collapse-text">(Click to expand)</span> </a>
+                <div class="panel-body" id="instructionBody">
+                    <p>The images were found on Instagram and the questions were asked of the posters. The responses are free-text from social media users, so they may not be correct or even relevant. Answer the two questions along the righthand side. If the response is correct, an "answer" field will appear on the left for you to copy/paste the relevant part of the response (1 - 5 words). Try to avoid words that wouldn't have been obvious from the image (clothing brands, place names, off-camera objects etc.). See below for the examples from the qualifying task.</p>
+                    1. Is the question relevant to the image?<br>
+                    2. Is the response relevant to the image?<br>
+                    <strong>Here are some examples:</strong>
+                    <table class="table table-condensed table-striped table-responsive">
+                        <tbody>
+                        </tbody>
+                        <colgroup>
+                            <col class="col-xs-2 col-md-2" />
+                            <col class="col-xs-2 col-md-2" />
+                            <col class="col-xs-8 col-md-8" />
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>Image</th>
+                            <th>Question and Response</th>
+                            <th>Annotation</th>
+                        </tr>
+                        <tr>
+                            <td><img src="TODO" height=100 /></td>
+                            <td><b>Q: </b>What is the dog doing?<br><b>R: </b>its looking at horse</td>
+                            <td>
+                                1. Yes (question is relevant to image because there is a dog in the photo)<br>
+                                2. Yes (response is relevant to image because the dog is looking at something)<br>
+                                Answer: looking" (since we can't see the horse in the photo)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="TODO" height=100/></td>
+                            <td><b>Q: </b>What is on top of the plate?<br><b>R: </b>my dinner</td>
+                            <td>
+                                1. Yes (question is relevant to image because there is a plate in the photo)<br>
+                                2. No (while technically correct, the response is not relevant to image specifically)<br>
+                                Answer: N/A (because we marked "no" for question 2, we don't need to annotate an answer)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="TODO" height=100/></td>
+                            <td><b>Q: </b>What is the boy wearing?<br><b>R: </b>it s girl</td>
+                            <td>
+                                1. No (question is wrong, because it assumes the child is a boy when she is not)<br>
+                                2. Yes (the response answers the question "what is in the image?")<br>
+                                Answer: "girl" (there is a girl in the photo)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="TODO" height=100/></td>
+                            <td><b>Q: </b>What is on top of the blender?<br><b>R: </b>there s no blender</td>
+                            <td>
+                                1. No (question asks about something not in image)<br>
+                                2. No (the response doesn't tell us anything about what is in the image)<br>
+                                Answer: N/A (because we marked "no" for question 2, we don't need to annotate an answer)
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End instructions --><!-- Categorization Layout -->
+
+    <div class="row" id="workContent">
+        <div class="col-xs-12 col-sm-8 content"><!-- Place the content (in this case a block of text) below. If content is not text then replace with the relevant html element (image, url, video) below. -->
+            <img class="well" src="TODO/${image_id_1}.jpg" height=300 />
+            <p id="question-1" class="question"><b>Question:</b> ${question_1}</p>
+            <p id="default-question-1" class="default-question"><b>Question:</b> What is in the image?</p>
+            <p id="response-1" class="response"><b>User Response:</b> ${response_1}</p>
+            <div id="answer-div-1" class="answer-div"><b>Answer:</b> <input id="answer-field-1" name="answer-1"/></div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 fields">
+            <div class="form-group">
+                <!-- Question for the Worker -->
+                <label class="group-label">1. Is the question valid with respect to the image?</label>
+
+                <!-- Input from the Worker -->
+                <div class="btn-group-vertical" data-toggle="buttons">
+                    <label class="btn btn-default">
+                        <input class="is-question-relevant" id="is-question-relevant-1" name="is-question-relevant-1" required="" type="radio" value="yes" />
+                        Yes
+                    </label>
+                    <label class="btn btn-default">
+                        <input class="is-question-relevant" id="is-question-relevant-1" name="is-question-relevant-1" required="" type="radio" value="no" />
+                        No
+                    </label>
+                </div>
+                <!-- Question for the Worker -->
+                <label class="group-label">2. Is the response valid with respect to the image?</label>
+
+                <!-- Input from the Worker -->
+                <div class="btn-group-vertical" data-toggle="buttons">
+                    <label class="btn btn-default">
+                        <input id="is-response-relevant-1" class="is-response-relevant" name="is-response-relevant-1" required="" type="radio" value="yes" />
+                        Yes
+                    </label>
+                    <label class="btn btn-default">
+                        <input id="is-response-relevant-1" class="is-response-relevant" name="is-response-relevant-1" required="" type="radio" value="no" />
+                        No
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr style="width: 100%">
+        <div class="col-xs-12 col-sm-8 content"><!-- Place the content (in this case a block of text) below. If content is not text then replace with the relevant html element (image, url, video) below. -->
+            <img class="well" src="TODO/${image_id_2}.jpg" height=300 />
+            <p id="question-2" class="question"><b>Question:</b> ${question_2}</p>
+            <p id="default-question-2" class="default-question"><b>Question:</b> What is in the image?</p>
+            <p id="response-2" class="response"><b>User Response:</b> ${response_2}</p>
+            <div id="answer-div-2" class="answer-div"><b>Answer:</b> <input id="answer-field-2" name="answer-2"/></div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 fields">
+            <div class="form-group">
+                <!-- Question for the Worker -->
+                <label class="group-label">1. Is the question valid with respect to the image?</label>
+
+                <!-- Input from the Worker -->
+                <div class="btn-group-vertical" data-toggle="buttons">
+                    <label class="btn btn-default">
+                        <input id="is-question-relevant-2" class="is-question-relevant" name="is-question-relevant-2" required="" type="radio" value="yes" />
+                        Yes
+                    </label>
+                    <label class="btn btn-default">
+                        <input id="is-question-relevant-2" class="is-question-relevant" name="is-question-relevant-2" required="" type="radio" value="no" />
+                        No
+                    </label>
+                </div>
+                <!-- Question for the Worker -->
+                <label class="group-label">2. Is the response valid with respect to the image?</label>
+
+                <!-- Input from the Worker -->
+                <div class="btn-group-vertical" data-toggle="buttons">
+                    <label class="btn btn-default">
+                        <input id="is-response-relevant-2" class="is-response-relevant" name="is-response-relevant-2" required="" type="radio" value="yes" />
+                        Yes
+                    </label>
+                    <label class="btn btn-default">
+                        <input id="is-response-relevant-2" class="is-response-relevant" name="is-response-relevant-2" required="" type="radio" value="no" />
+                        No
+                    </label>
+                </div>
+            </div>
+        </div>
+</section>
+<!-- End Categorization Layout --><!-- Please note that Bootstrap CSS/JS and JQuery are 3rd party libraries that may update their url/code at any time. Amazon Mechanical Turk (MTurk) is including these libraries as a default option for you, but is not responsible for any changes to the external libraries --><!-- External CSS references -->
+<link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet" /><!-- Open internal style sheet -->
+<style type="text/css">#collapseTrigger{
+    color:#fff;
+    display: block;
+    text-decoration: none;
+}
+#submitButton{
+    white-space: normal;
+}
+#instructionBody table{
+    font-size: 14px;
+    margin-top: 10px;
+}
+#instructionBody table caption{
+    text-align: left;
+    padding: 0 0 5px 0;
+}
+.btn-group-vertical{
+    display: block;
+    margin-top: 10px;
+}
+.content{
+    margin-bottom: 15px;
+}
+.radio:first-of-type{
+    margin-top: -5px;
+}
+</style>
+<!-- Close internal style sheet --><!-- External JS references --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!-- Open internal javascript --><script>
+    $(document).ready(function() {
+        // Instructions expand/collapse
+        var content = $('#instructionBody');
+        var trigger = $('#collapseTrigger');
+        content.hide();
+        $('.collapse-text').text('(Click to expand)');
+        trigger.click(function(){
+            content.toggle();
+            var isVisible = content.is(':visible');
+            if(isVisible){
+                $('.collapse-text').text('(Click to collapse)');
+            }else{
+                $('.collapse-text').text('(Click to expand)');
+            }
+        });
+        // end expand/collapse
+
+        // show/hide default question
+        $('p.default-question').hide();
+        $('input[class="is-question-relevant"][value="yes"]').change(function () {
+            var row_idx = $(this).attr("id").slice(-1);
+            $('p#default-question-'+row_idx).hide();
+            $('p#question-'+row_idx).css("text-decoration", "none");
+            $('p#question-'+row_idx).fadeIn();
+        });
+        $('input[class="is-question-relevant"][value="no"]').change(function () {
+            var row_idx = $(this).attr("id").slice(-1);
+            $('p#default-question-'+row_idx).fadeIn();
+            $('p#question-'+row_idx).css("text-decoration", "line-through");
+        });
+        // end default question
+
+        // show/hide answer field
+        $('div.answer-div').hide();
+        $('input[class="is-response-relevant"][value="yes"]').change(function () {
+            $('div#answer-div-'+$(this).attr("id").slice(-1)).fadeIn();
+        });
+        $('input[class="is-response-relevant"][value="no"]').change(function () {
+            $('div#answer-div-'+$(this).attr("id").slice(-1)).hide();
+        });
+        // end answer field
+
+        // highlight selected category
+        var inputs = $("input:radio");
+        inputs.change(function(){
+            if($(this).is(":checked")){
+                $(this).parent().removeClass("btn-default");
+                $(this).parent().addClass("btn-success");
+                $(this).parent().siblings().addClass("btn-default");
+                $(this).parent().siblings().removeClass("btn-success");
+            }
+        });
+        // end highlight
+
+        // validate that the answer is a substring of the response
+        $('input#submitButton').click(function(e){
+            var isValid = true;
+            if (!$('#answer-field-1').is(':hidden')) {
+                var answer = $('#answer-field-1').val();
+                var response = '${response_1}';
+                if (answer.split(" ").length > 5) {
+                    alert("Answer 1: The answer should be fewer than 5 words. If that is not possible, mark the response as invalid.");
+                    isValid = false;
+                } else if (answer == '' || response.indexOf(answer) < 0) {
+                    alert("Answer 1: The answer must be part of the response. Please copy/paste directly from the user response.");
+                    isValid = false;
+                }
+            }
+            if (!$('#answer-field-2').is(':hidden')) {
+                var answer = $('#answer-field-2').val();
+                var response = '${response_2}';
+                if (answer.split(" ").length > 5) {
+                    alert("Answer 2: The answer should be fewer than 5 words. If that is not possible, mark the response as invalid.");
+                    isValid = false;
+                } else if (answer == '' || response.indexOf(answer) < 0) {
+                    alert("Answer 2: The answer must be part of the response. Please copy/paste directly from the user response.");
+                    isValid = false;
+                }
+            }
+            if (!isValid) {
+                e.preventDefault();
+            }
+        });
+        // end answer validation
+
+    });
+</script><!-- Close internal javascript -->
+        <p class="text-center"><input type="submit" id="submitButton" class="btn btn-primary" value="Submit" /></p></form><script language="Javascript">turkSetAssignmentID();</script></body></html>

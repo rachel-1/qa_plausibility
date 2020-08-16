@@ -1,0 +1,73 @@
+<QuestionForm xmlns='http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd'>  
+    <Text> The images were found on Instagram and the questions were asked of the posters. The responses are free-text from social media users, so they need to be verified. Answer the two questions for each image. If the response is correct, an "answer" field will appear for you to copy/paste the relevant part of the response (around 1 - 5 words). Try to avoid words that wouldn't have been obvious from the image (clothing brands, place names, off-camera objects etc.). The first few are simply examples. Click the option that says "[CORRECT]".</Text>
+    <Question>
+      <QuestionIdentifier>self_report</QuestionIdentifier>
+      <DisplayName>Q1</DisplayName>
+      <IsRequired>true</IsRequired>
+      <QuestionContent>
+        <Text> Which statement best describes your color vision? </Text>
+      </QuestionContent>
+      <AnswerSpecification>
+        <SelectionAnswer>
+          <StyleSuggestion>radiobutton</StyleSuggestion>
+          <Selections>
+            <Selection>
+              <SelectionIdentifier>rg</SelectionIdentifier>
+              <Text>I am red-green colorblind.</Text>
+            </Selection>
+            <Selection>
+              <SelectionIdentifier>by</SelectionIdentifier>
+              <Text>I am blue-yellow colorblind.</Text>
+            </Selection>
+            <Selection>
+              <SelectionIdentifier>other</SelectionIdentifier>
+              <Text>I have some other issue with my color vision.</Text>
+            </Selection>
+            <Selection>
+              <SelectionIdentifier>norm</SelectionIdentifier>
+              <Text>My color vision is normal.</Text>
+            </Selection>
+          </Selections>
+        </SelectionAnswer>
+      </AnswerSpecification>
+  </Question>
+  <Question>
+      <QuestionIdentifier>ishihara_39</QuestionIdentifier>
+      <DisplayName>Q2</DisplayName>
+      <IsRequired>true</IsRequired>
+      <QuestionContent>
+        <Text> What number do you see in the image below? </Text>
+        <Binary>
+          <MimeType>
+            <Type>image</Type>
+            <SubType>jpg</SubType>
+          </MimeType>
+          <DataURL>https://www.spservices.co.uk/images/products/pics/1401209116aw2271.jpg</DataURL>
+          <AltText>Ishihara Color Plate</AltText>
+        </Binary>
+      </QuestionContent>
+      <AnswerSpecification>
+        <SelectionAnswer>
+          <StyleSuggestion>radiobutton</StyleSuggestion>
+          <Selections>
+            <Selection>
+              <SelectionIdentifier>122</SelectionIdentifier>
+              <Text>122</Text>
+            </Selection>
+            <Selection>
+              <SelectionIdentifier>74</SelectionIdentifier>
+              <Text>74</Text>
+            </Selection>
+            <Selection>
+              <SelectionIdentifier>21</SelectionIdentifier>
+              <Text>21</Text>
+            </Selection>
+            <Selection>
+              <SelectionIdentifier>none</SelectionIdentifier>
+              <Text>I don't see a number.</Text>
+            </Selection>
+          </Selections>
+        </SelectionAnswer>
+      </AnswerSpecification>
+  </Question>
+</QuestionForm>
